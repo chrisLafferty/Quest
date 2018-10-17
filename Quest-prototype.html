@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name=description content="Favorite Gardens List jQuery Mobile">
+    <meta name="author" content="chrisLafferty">
+    <title>Quest</title>
+    
+    
+   
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        img.fullscreen{width:100%;}
+        img.thumbnail{width:15%;}
+        
+        
+           
+      
+        
+    </style>
+  <style type="text/css">
+    #home{
+        background-image: url("images/background.PNG");
+        background-size: cover;
+        height: 100%;
+        overflow: hidden;
+    }
+    form#button{
+        position:absolute;
+        bottom: 10%;
+        right:15%;
+        width:250px;
+       
+    }
+    
+    h2#login_Text{
+        color : white;
+        text-align: center;
+    }
+    div#input_Box{
+        width:90%;
+        position:absolute;
+        right:5%;
+    }
+    div.ui-input-text.ui-body-inherit.ui-corner-all.ui-shadow-inset{
+        background-color:#090909 ;
+        opacity: 10;
+        margin-bottom:20px ;
+        margin-top: 25px;
+    }
+    input#text-1{
+        
+        background-color: #090909 ;
+        opacity: 0.8;
+        border: 1px solid #707070 ;
+        color:white ;
+    }
+    input#text-1:hover{
+        border: 1px solid #0086e6 ;
+    }
+    input#text-2{
+        
+        background-color: #090909 ;
+        opacity: 0.8;
+        border: 1px solid #707070 ;
+        color:white ;
+    }
+    input#text-2:hover{
+        border: 1px solid #0086e6 ;
+    }
+    a#Button{
+        background-color: #090909 ;
+        opacity: 0.8;
+        border: 1px solid #707070 ;
+        color:white ;
+    }
+    a#Button:hover{
+        border: 1px solid #0086e6 ;
+    }
+    a#Button:active{
+        background-color: 1px solid #b5b5b6 ;
+    }
+    div#login_Box{
+        width: 90%;
+        height:350px;
+        background-color:#0E012D;
+        opacity:0.6 ;
+        position: absolute;
+        bottom:40px;
+        border-radius: 10px;
+
+    }
+   div#menu_Box{
+        width: 90%;
+        position: absolute;
+        bottom: 5%;
+   }
+    h1#user_menu{
+        text-align: center;
+        font: 1em Tahoma;
+        color: white;
+        
+        margin-top: 65px;
+        
+    }
+    a#menuitm{
+        height:100px;  
+        background-color: rgba(117, 35, 152, 0.177);
+        
+        border-radius: 5px;
+        border: .5px solid white;
+    }
+    a#menu_settings{
+        background-color: rgba(24, 13, 29, 0.428);
+        color: white;
+        width:250px;
+        border: .5px solid   #707070;
+        border-radius: 5px;
+        left: 10%;
+        height: 25px
+        
+        
+    }
+    h2#gamerTag{
+        font-family: "Lucida Console", Times, serif;
+        font-size: 20px;
+        text-align: center;
+        color:white;
+    }
+    div#start{
+        background-image: url("images/start_background1.PNG");
+        background-size: cover;
+        height: 100%;
+        overflow: hidden;
+    }
+    #games{
+        background-image: url("images/start_background1.PNG");
+        background-size: cover;
+        height: 100%;
+        overflow: hidden;
+    }
+    #assignment{
+        background-image: url("images/start_background1.PNG");
+        background-size: cover;
+        height: 100%;
+        overflow: hidden;
+    }
+    h2#start_chooseTask{
+        background-color: rgba(192, 192, 192, 0.1);
+        text-align: center;
+        color: white;
+
+    }
+    h2#startHeader{
+        background-color: #062956;
+        color: white;
+        border-color:#062956; 
+        font-family: AR Destine;
+        font-weight: lighter;
+    }
+    header#startHeader{
+        background-color: #062956;
+    }
+    header#game_header{
+        background-color: #062956;
+        color: white;
+        border-color:#062956;
+    }
+    header#assignments_header{
+        background-color: #062956;
+        color: white;
+        border-color:#062956;
+    }
+    a#header_back{
+        background-color: rgba(192, 192, 192, 0.1);
+        color:white;
+        font-weight: lighter ;
+        border-color:#062956; 
+    }
+    article#games_content{
+        margin-top: 15%;
+    }
+    h1#assignmentTitle_text{
+        color: white;
+    }
+   
+    </style>
+</head>
+<body>
+    
+<!-- home page -->                                                                                                                  <!-- home page -->
+<div data-role="page" class="bgimg" id="home">   
+    <header data-role="header" data-position="fixed">
+      <!--<no header>-->
+    </header>
+
+    <article data-role="content">
+       <div  id="login_Box"> 
+           <h2 id="login_Text">login</h2>
+           <div id="input_Box">
+                <input type="text"  name="text-1" id="text-1" value="" placeholder="user ID">
+                <input type="text"  name="text-2" id="text-2" value="" placeholder="password">
+            </div>
+        <form id="button"  >
+            <a href="#start" id="Button" data-transition="slide" class="ui-btn ui-corner-all">GO</a>
+        </form> 
+    </div>     
+    </article>
+
+    <footer data-role="footer" data-position="fixed">
+       
+    </footer>
+</div> <!-- home page -->                                                                                                           <!-- home page -->
+        
+<!-- start page -->    <!-- -->                                                                                                      <!--user menu-->
+<div data-role="page" id="start">
+<header data-role="header" id="startHeader" >
+        <!--<img class="thumbnail"   src="images/quest-icon.png" alt="Q-icon" />-->       
+       
+</header>
+
+<article data-role="content">
+   
+    <div id="menu_Box">
+
+            <h2 id="gamerTag">XIXarcticassaultXIX</h2>
+
+        <div class="ui-grid-a">
+            <div class="ui-block-a"><a href="#games" class="ui-btn" id="menuitm"><h1 id="user_menu">Games</h2></a> </div>
+            <div class="ui-block-b"><a href="#assignment" class="ui-btn" id="menuitm"><h1 id="user_menu">Assignments</h2></a> </div>
+            <div class="ui-block-a"><a class="ui-btn" id="menuitm"><h1 id="user_menu">Avatar Village</h2></a> </div>
+            <div class="ui-block-b"><a class="ui-btn"id="menuitm" ><h1 id="user_menu">Store</h2></a> </div>
+        </div>
+        <div class="ui-grid-solo">
+                <div class="ui-block-a"><a class="ui-btn" id="menu_settings">Settings</a> </div>
+        </div>
+    </div>  
+
+    
+
+</article>
+
+<footer data-role="footer" data-position="fixed">
+   <!--  <nav data-role="navbar">
+        <ul>
+		<li><a href="#home" data-icon="home">Home</a></li>
+		<li><a href="#photos" data-icon="grid">Photos</a></li>
+		<li><a href="#info" data-icon="info">Info</a></li>
+        </ul>
+    </nav>-->
+</footer>
+
+</div> <!-- start page -->                                                                                                           <!--user menu -->
+
+<!-- assignment page -->
+<div data-role="page" id="assignment">
+        <header data-role="header" id="assignments_header">
+                <a href="#start" id="header_back" class="ui-shadow ui-btn ui-corner-all">Back</a>
+            <h1>Assignment</h1>
+        </header>
+
+<article data-role="content">
+        <h1 id="assignmentTitle_text">Math</h1>
+        <div data-role="controlgroup" >
+                <a href="#" class="ui-btn ui-corner-all">3.1</a>
+                <a href="#" class="ui-btn ui-corner-all">3.2</a>   
+                <a href="#" class="ui-btn ui-corner-all">3.3</a>   
+                                      
+        </div>
+        <h1 id="assignmentTitle_text">Science</h1>
+        <div data-role="controlgroup" >
+                <a href="#" class="ui-btn ui-corner-all">1.1</a>
+                <a href="#" class="ui-btn ui-corner-all">2.1</a>   
+                                    
+        </div>
+</article>
+
+
+<footer data-role="footer" data-position="fixed">
+    
+</footer>
+
+</div>
+
+<!-- games page -->
+<div data-role="page" id="games">
+
+        <header data-role="header" id="game_header">
+                <a href="#start" id="header_back" class="ui-shadow ui-btn ui-corner-all">Back</a>
+            <h1>Games</h1>
+        </header>
+        
+        <article data-role="content" id="games_content">
+                <div data-role="controlgroup" >
+                        <a href="#" class="ui-btn ui-corner-all">Overwatch</a>
+                        <a href="#" class="ui-btn ui-corner-all">PAC-MAN</a>   
+                        <a href="#" class="ui-btn ui-corner-all">Hyper-light-drifter</a>   
+                        <a href="#" class="ui-btn ui-corner-all">Fez</a>   
+                        <a href="#" class="ui-btn ui-corner-all">Halo</a>                      
+                </div>
+        </article>
+        
+        <footer data-role="footer" data-position="fixed">
+            
+        </footer>
+        
+</div>
+<!-- image pages TODO: create these-->
+
+        
+</body>
+</html>
